@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Spooner</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrap">
+
+        <!-- Header / Intro -->
+        <header id="intro">
+            <img src="assets/images/profile.jpeg" alt="James Spooner" class="profile-photo">
+            <div class="intro-text">
+                <h1>James Spooner</h1>
+                <p class="tagline">GIS Specialist.</p>
+                <p class="tagline">Adventure enthusiast.</p>
+                <p class="tagline">Professional map nerd.</p>
+            </div>
+        </header>
+
+        <div class="layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="sidebar-block">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-phone"></i>+ (672) 866 2995</p>
+                    <p><i class="fa-solid fa-envelope"></i> jamesspooner1995@gmail.com</p>
+                </div>
+
+                <div class="sidebar-block">
+                    <h4>Education</h4>
+                    <div class="edu-item">
+                        <p class="edu-title">University of Brighton<span class="edu-date">(2013–2016)</span></p>
+                        <p class="edu-detail">BSc (Hons) Geography</p>
+                    </div>
+                    <div class="edu-item">
+                        <p class="edu-title">Dartford Grammar School<span class="edu-date">(2006–2013)</span></p>
+                        <p class="edu-detail">International Baccalaureate</p>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+
+<!-- About Me -->
+<details class="section-card">
+    <summary>
+        <img src="assets/images/icons/about_me_icon.jpg" alt="" class="section-icon">
+        About Me
+    </summary>
+    <div class="section-content">
+        <p>I've always been drawn to the space where geography meets real-world impact. What started as a fascination with maps turned into a career analysing spatial data, building GIS systems, and helping organisations make better decisions about the land, resources, and communities they work with.</p><br>
+        <p>Some of the work I'm proudest of sits outside a typical office brief — mapping vegetation for anti-poaching efforts, tracking endangered species across shifting terrain, spending time in Bolivia co-managing volunteers at an animal rescue sanctuary. GIS, for me, has never just been about the software. It's a way of understanding the world a little more clearly, and occasionally doing some good while I'm at it.</p><br>
+        <p>Outside of work, I chase the same instinct in a different form — travel, the outdoors, and the occasional questionable decision to jump off a bridge attached to a giant elastic band. If there's a map involved, or a reasonable amount of adrenaline, I'm probably interested.</p><br>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openProjectModal('assets/images/hobbies/photo1.jpg', 'Family time.')">
+                <img src="assets/images/hobbies/photo1.jpg" alt="Hobby photo 1" class="photo-fill">
+            </div>
+            <div class="portfolio-item" onclick="openProjectModal('assets/images/hobbies/photo2.jpg', 'Strike a pose.')">
+                <img src="assets/images/hobbies/photo2.jpg" alt="Hobby photo 2" class="photo-fill">
+            </div>
+            <div class="portfolio-item" onclick="openProjectModal('assets/images/hobbies/photo3.jpg', 'Reaching new heights')">
+                <img src="assets/images/hobbies/photo3.jpg" alt="Hobby photo 3" class="photo-fill">
+            </div>
+        </div>
+    </div>
+</details>
+
+
+
+<!-- Where I've Worked -->
+<details class="section-card">
+    <summary>
+        <img src="assets/images/icons/where_ive_worked_icon.jpg" alt="" class="section-icon">
+        Where I've Worked
+    </summary>
+    <div class="section-content">
+
+        <div class="job">
+                <p>My path into GIS wasn't entirely linear. I spent my early twenties in admissions, market research, and customer-facing roles — work that taught me how to manage people, data, and deadlines long before I ever touched a mapping tool professionally. There's a version of this story where none of that experience mattered once I moved into GIS, but the opposite has been true: knowing how to communicate clearly, manage competing priorities, and actually listen to what people need has shaped how I approach every project since.</p><br>
+                <p>The real turning point came through conservation work — internships and fieldwork mapping vegetation, tracking endangered species, and supporting anti-poaching efforts. It was there that GIS stopped being just software to me and became a way of understanding a landscape, a population, a problem, all at once. That internship led to technician work classifying land cover, which led to analyst roles where I started solving genuine operational problems with spatial data — automating reports, cleaning up databases, building tools that people actually used day to day.</p><br>
+                <p>Today, I lead the design and deployment of full GIS and asset management systems, working across the entire stack from field data collection to dashboards leadership actually looks at. But the instinct that got me here hasn't changed much from those early days in the field: give me a dataset, a map, and a problem worth solving, and I'm happy.</p><br>
+                <p>For a complete working history, please download my resume using the button found at the bottom of the page.</p>
+            </ul>
+        </div>
+    </div>
+</details>
+
+
+<!-- My Work -->
+<details class="section-card">
+    <summary>
+        <img src="assets/images/icons/my_work_icon.jpg" alt="" class="section-icon">
+        My Work
+    </summary>
+
+    <div class="section-content">
+        <p class="section-intro">A selection of GIS projects I've worked on — click any thumbnail to view more detail.</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openProjectModal('assets/images/portfolio/portfolio1.jpeg', 'DRAFT CONCEPT PROJECT', 'This project was conceptualized to better improve my skillset and was never commissioned by any nation mentioned.')">
+                <img src="assets/images/portfolio/portfolio1.jpeg" alt="GIS project screenshot">
+            </div>
+        </div>
+    </div>
+</details>
+
+
+<!-- Volunteering -->
+<details class="section-card">
+    <summary>
+        <img src="assets/images/icons/volunteering_icon.jpg" alt="" class="section-icon">
+        Volunteering
+    </summary>
+
+    <div class="section-content">
+
+        <div class="volunteer-content">
+
+            <div class="volunteer-text">
+                <p>
+                    Volunteered as a Co-ordinator at Parque Machía, helping manage the day-to-day running of the sanctuary while supporting the care of rescued wildlife. Worked with an international team to organise daily tasks, oversee volunteers, maintain animal enclosures, and contribute to the rehabilitation and long-term welfare of rescued animals in a challenging, hands-on environment.
+                </p>
+            </div>
+
+            <div class="volunteer-photo">
+                <div class="portfolio-item"
+                     onclick="openProjectModal('assets/images/hobbies/photo4.jpg', 'Making new friends.')">
+                    <img src="assets/images/hobbies/photo4.jpg" alt="Holding a coati at Parque Machía">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</details>
+
+
+
+
+            </main>
+
+        </div>
+
+        <footer id="site-footer">
+            <a href="assets/documents/James_Spooner_CV.pdf" download class="footer-btn">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="https://www.linkedin.com/in/james-spooner1995/" target="_blank" class="footer-icon" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </footer>
+
+    </div>
+
+    <!-- Project Modal -->
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal-overlay" onclick="closeProjectModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+        <img id="modalImage" src="" alt="">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<script>
+    function openProjectModal(imgSrc, title, description) {
+        document.getElementById('modalImage').src = imgSrc;
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalDescription').textContent = description;
+        document.getElementById('projectModal').classList.add('active');
+    }
+
+    function closeProjectModal() {
+        document.getElementById('projectModal').classList.remove('active');
+    }
+
+    function openVideoModal(videoSrc, title, description) {
+        const video = document.getElementById('modalVideo');
+        video.src = videoSrc;
+        document.getElementById('videoModalTitle').textContent = title;
+        document.getElementById('videoModalDescription').textContent = description;
+        document.getElementById('videoModal').classList.add('active');
+        video.play();
+    }
+
+    function closeVideoModal() {
+        const video = document.getElementById('modalVideo');
+        video.pause();
+        video.currentTime = 0;
+        document.getElementById('videoModal').classList.remove('active');
+    }
+</script>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal-overlay" onclick="closeVideoModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="modal-close" onclick="closeVideoModal()">&times;</span>
+        <video id="modalVideo" controls class="hobby-video"></video>
+        <h3 id="videoModalTitle"></h3>
+        <p id="videoModalDescription"></p>
+    </div>
+</div>
