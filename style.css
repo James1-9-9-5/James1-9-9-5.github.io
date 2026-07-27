@@ -583,3 +583,17 @@ summary {
         margin: 0 0 1rem 0;
     }
 }
+
+@media (max-width: 600px) {
+    .volunteer-content {
+        flex-direction: column;
+    }
+    .volunteer-photo {
+        width: 100%;
+    }
+    .volunteer-photo .portfolio-item {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
