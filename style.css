@@ -550,3 +550,36 @@ summary {
     object-fit: cover;
     background: none;
 }
+
+.job-with-image .portfolio-item {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    float: left;
+    margin: 0 1.5rem 0.5rem 0;
+    shape-outside: margin-box;
+    cursor: pointer;
+}
+
+.job-with-image .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.job-with-image::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .job-with-image .portfolio-item {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 0 1rem 0;
+    }
+}
