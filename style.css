@@ -44,9 +44,11 @@ a { color: var(--sage-d); }
     font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 700; font-size: 1.1rem;
 }
 .nav-links {
-    display: flex; gap: 4px; list-style: none; margin: 0 0 0 auto; padding: 0;
+    display: flex; gap: 4px; list-style: none; margin: 0 auto; padding: 0;
     overflow-x: auto;
 }
+.nav-links li:first-child { margin-left: auto; }
+.nav-links li:last-child { margin-right: auto; }
 .nav-links a {
     display: block; padding: 8px 12px; border-radius: 6px; white-space: nowrap;
     color: #d6dfd3; text-decoration: none; font-weight: 600; font-size: .95rem;
@@ -120,6 +122,10 @@ a { color: var(--sage-d); }
 /* ---------- Experience ---------- */
 .role { display: grid; grid-template-columns: 180px 1fr; gap: 8px 32px; padding: 28px 0; border-top: 1px solid var(--line); }
 .role-meta { color: var(--muted); font-weight: 600; }
+.role-meta span { display: block; }
+.role-duration, .role-location { font-weight: 400; font-size: .92rem; }
+.role-duration:empty { display: none; }
+.role-location i { margin-right: 4px; color: var(--sage-d); }
 .role h3 { font-size: 1.25rem; }
 .role-company { margin: 2px 0 10px; font-weight: 600; color: var(--sage-d); }
 .role ul { margin: 0; padding-left: 1.2em; }
