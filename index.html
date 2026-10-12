@@ -30,10 +30,6 @@
             <li><a href="#skills">Skills &amp; Education</a></li>
             <li><a href="#beyond">Beyond the Map</a></li>
         </ul>
-        <div class="nav-actions">
-            <a class="btn" href="assets/documents/CV.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/james-spooner1995/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
     </div>
 </nav>
 
@@ -50,6 +46,8 @@
                 <p class="summary">Experienced in asset management, LiDAR analysis, automation, and ArcGIS-based field workflows. Builds end-to-end geospatial systems that improve decision-making, data quality, and operational efficiency for First Nations communities.</p>
                 <div class="hero-actions">
                     <a class="btn" href="mailto:jamesspooner1995@gmail.com"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+                    <a class="btn" href="assets/documents/CV.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
+                    <a class="icon-btn" href="https://www.linkedin.com/in/james-spooner1995/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -111,7 +109,11 @@
 
         <div class="roles">
             <article class="role">
-                <div class="role-meta">Jan 2025 – Present</div>
+                <div class="role-meta">
+                    <span class="role-dates">Jan 2025 – Present</span>
+                    <span class="role-duration" data-start="2025-01" data-end="present"></span>
+                    <span class="role-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vancouver, British Columbia, Canada</span>
+                </div>
                 <div>
                     <details class="role-details" open>
                         <summary><h3>GIS Specialist</h3>
@@ -129,7 +131,11 @@
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">Mar 2022 – Sep 2024</div>
+                <div class="role-meta">
+                    <span class="role-dates">Mar 2022 – Aug 2024</span>
+                    <span class="role-duration" data-start="2022-03" data-end="2024-08"></span>
+                    <span class="role-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> London, England, United Kingdom</span>
+                </div>
                 <div>
                     <details class="role-details">
                         <summary><h3>GIS Analyst</h3>
@@ -143,7 +149,11 @@
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">Nov 2021 – Mar 2022</div>
+                <div class="role-meta">
+                    <span class="role-dates">Nov 2021 – Mar 2022</span>
+                    <span class="role-duration" data-start="2021-11" data-end="2022-03"></span>
+                    <span class="role-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> London, England, United Kingdom · Remote</span>
+                </div>
                 <div>
                     <details class="role-details">
                         <summary><h3>GIS Technician</h3>
@@ -156,7 +166,11 @@
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">Jul 2021 – Oct 2021</div>
+                <div class="role-meta">
+                    <span class="role-dates">Jul 2021 – Oct 2021</span>
+                    <span class="role-duration" data-start="2021-07" data-end="2021-10"></span>
+                    <span class="role-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Gondwana Game Reserve, South Africa</span>
+                </div>
                 <div>
                     <details class="role-details">
                         <summary><h3>GIS Intern</h3>
@@ -334,6 +348,20 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeProjectModal(); });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Role durations (counted inclusively by month, like LinkedIn)
+    document.querySelectorAll('.role-duration[data-start]').forEach(function (el) {
+        var s = el.dataset.start.split('-');
+        var end = el.dataset.end && el.dataset.end !== 'present' ? el.dataset.end.split('-') : null;
+        var now = new Date();
+        var ey = end ? +end[0] : now.getFullYear();
+        var em = end ? +end[1] : now.getMonth() + 1;
+        var total = (ey - +s[0]) * 12 + (em - +s[1]) + 1;
+        var y = Math.floor(total / 12), m = total % 12, parts = [];
+        if (y) parts.push(y + (y > 1 ? ' yrs' : ' yr'));
+        if (m) parts.push(m + (m > 1 ? ' mos' : ' mo'));
+        el.textContent = parts.join(' ');
+    });
 
     // Highlight the nav link for the section in view
     var links = document.querySelectorAll('.nav-links a');
