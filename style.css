@@ -167,6 +167,22 @@ a { color: var(--sage-d); }
 
 .prose { max-width: none; }
 .prose p { margin: 0 0 1em; }
+/* Beyond the Map: text rows with a photo beside them */
+.story { margin-top: 36px; }
+.story-row { display: grid; grid-template-columns: 1fr minmax(220px, 300px); gap: 40px; align-items: center; margin-top: 40px; }
+.story-row:first-child { margin-top: 0; }
+.story-row--left { grid-template-columns: minmax(220px, 300px) 1fr; }
+.story-row--left .story-photo { order: -1; }
+.story-row--both { grid-template-columns: minmax(200px, 260px) 1fr minmax(200px, 260px); }
+.story-row--both .story-photo--left { order: -1; }
+.story-photo { width: 100%; aspect-ratio: auto; }
+.story-photo img { height: auto; object-fit: initial; }
+@media (max-width: 860px) {
+    .story-row, .story-row--left, .story-row--both { grid-template-columns: 1fr; gap: 16px; }
+    .story-row--left .story-photo, .story-row--both .story-photo--left { order: 0; }
+    .story-photo { max-width: 420px; }
+}
+
 .photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
 @media (max-width: 560px) { .photos { gap: 8px; } }
 
