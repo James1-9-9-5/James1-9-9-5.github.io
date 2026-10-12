@@ -35,6 +35,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills &amp; Education</a></li>
             <li><a href="#beyond">Beyond the Map</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -282,16 +283,25 @@
     </div>
 </section>
 
+<!-- ===== 6. CONTACT ===== -->
+<section id="contact" class="section contact">
+    <div class="wrap">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lede">Working on something that needs GIS or asset management support? I'd like to hear about it.</p>
+        <div class="contact-actions">
+            <a class="btn" href="mailto:jamesspooner1995@gmail.com"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+            <a class="btn" href="assets/documents/CV.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/james-spooner1995/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="contact-email" href="mailto:jamesspooner1995@gmail.com">jamesspooner1995@gmail.com</a>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
     <div class="wrap">
-        <div class="footer-actions">
-            <a class="btn" href="assets/documents/CV.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/james-spooner1995/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <p><a href="mailto:jamesspooner1995@gmail.com">jamesspooner1995@gmail.com</a></p>
         <small>&copy; <span id="year"></span> James Spooner</small>
     </div>
 </footer>
@@ -353,15 +363,24 @@
 
     // Highlight the nav link for the section in view
     var links = document.querySelectorAll('.nav-links a');
+    var sections = document.querySelectorAll('main > section');
+    function setActive(id) {
+        links.forEach(function (a) {
+            a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false');
+        });
+    }
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            links.forEach(function (a) {
-                a.setAttribute('aria-current', a.getAttribute('href') === '#' + entry.target.id ? 'true' : 'false');
-            });
+            if (entry.isIntersecting) setActive(entry.target.id);
         });
     }, { rootMargin: '-40% 0px -55% 0px' });
-    document.querySelectorAll('main > section').forEach(function (s) { observer.observe(s); });
+    sections.forEach(function (s) { observer.observe(s); });
+    // The Contact section is short, so at the very bottom of the page highlight it explicitly
+    window.addEventListener('scroll', function () {
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+            setActive(sections[sections.length - 1].id);
+        }
+    }, { passive: true });
 </script>
 
 </body>
