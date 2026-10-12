@@ -123,7 +123,7 @@ a { color: var(--sage-d); }
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 0; font-size: .98rem; }
 .facts dt { font-weight: 700; color: var(--sage-d); }
 .facts dd { margin: 0; }
-.note { margin-top: 32px; padding-left: 16px; border-left: 4px solid var(--sage-d); color: var(--muted); max-width: 62ch; }
+.note { margin-top: 32px; padding-left: 16px; border-left: 4px solid var(--sage-d); color: var(--muted); max-width: none; }
 
 /* ---------- Experience ---------- */
 .role { display: grid; grid-template-columns: 180px 1fr; gap: 8px 32px; padding: 28px 0; border-top: 1px solid var(--line); }
