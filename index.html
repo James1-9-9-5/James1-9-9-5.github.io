@@ -7,8 +7,29 @@
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Summary styles (can be moved into style.css) -->
+    <style>
+        .summary {
+            margin: 0 0 8px;
+            padding: 4px 0 4px 20px;
+            border-left: 4px solid #7a9272;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #2b2b2b;
+            max-width: 62ch;
+        }
+
+        @media (max-width: 700px) {
+            .summary {
+                font-size: 1.05rem;
+                padding-left: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -39,6 +60,9 @@
 
             <!-- MAIN CONTENT -->
             <main class="main-content">
+
+<!-- Summary -->
+<p class="summary">GIS Specialist experienced in asset management, LiDAR analysis, automation, and ArcGIS-based field workflows. Builds end-to-end geospatial systems that improve decision-making, data quality, and operational efficiency for First Nations communities.</p>
 
 <!-- About Me -->
 <details class="section-card">
@@ -160,8 +184,6 @@
     </div>
 
     <!-- Project Modal -->
-
-<!-- Project Modal -->
 <div id="projectModal" class="modal-overlay" onclick="closeProjectModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="modal-close" onclick="closeProjectModal()">&times;</span>
@@ -209,3 +231,6 @@
         <p id="videoModalDescription"></p>
     </div>
 </div>
+
+</body>
+</html>
