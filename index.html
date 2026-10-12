@@ -6,7 +6,7 @@
     <title>James Spooner | GIS Specialist</title>
     <meta name="description" content="GIS Specialist experienced in asset management, LiDAR analysis, automation, and ArcGIS-based field workflows.">
     <meta property="og:title" content="James Spooner | GIS Specialist">
-    <meta property="og:description" content="GIS Specialist experienced in asset management, LiDAR analysis, automation, and ArcGIS-based field workflows.">
+    <meta property="og:description" content="Experienced in asset management, LiDAR analysis, automation, and ArcGIS-based field workflows.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Collapsible roles */
+        .role-details > summary { list-style: none; cursor: pointer; position: relative; padding-right: 36px; }
+        .role-details > summary::-webkit-details-marker { display: none; }
+        .role-details > summary::after {
+            content: ""; position: absolute; right: 6px; top: 8px; width: 9px; height: 9px;
+            border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+            transform: rotate(45deg); transition: transform .2s ease; opacity: .6;
+        }
+        .role-details[open] > summary::after { transform: rotate(-135deg); top: 14px; }
+        .role-details > summary:hover::after { opacity: 1; }
+        .role-details > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 4px; }
+        .role-details > summary h3 { margin-bottom: 2px; }
+        .role-details > :not(summary) { margin-top: 12px; }
+    </style>
 </head>
 <body>
 
@@ -73,29 +88,29 @@
     <div class="section">
         <div class="wrap">
             <h2 class="section-title">Featured work</h2>
-            <p class="section-lede">[One line on what these show.]</p>
+            <p class="section-lede">From field data capture to LiDAR analysis, systems built to turn spatial data into decisions.</p>
             <div class="grid">
                 <article class="card">
-                    <div class="thumb">[Image]</div>
+                    <div class="thumb">GIS &amp; Asset Management</div>
                     <div class="card-body">
-                        <h3>[Project title]</h3>
-                        <p>[One-line outcome.]</p>
+                        <h3>GIS &amp; Asset Management Systems</h3>
+                        <p>Field-to-dashboard workflows for real-time deficiency reporting and maintenance tracking.</p>
                         <a class="more" href="#projects">Read case study</a>
                     </div>
                 </article>
                 <article class="card">
-                    <div class="thumb">[Image]</div>
+                    <div class="thumb">LiDAR Analysis</div>
                     <div class="card-body">
-                        <h3>[Project title]</h3>
-                        <p>[One-line outcome.]</p>
+                        <h3>LiDAR Analysis Workflows</h3>
+                        <p>Tiling, classification, canopy models and tree detection from raw point clouds.</p>
                         <a class="more" href="#projects">Read case study</a>
                     </div>
                 </article>
                 <article class="card">
-                    <div class="thumb">[Image]</div>
+                    <div class="thumb">Automation</div>
                     <div class="card-body">
-                        <h3>[Project title]</h3>
-                        <p>[One-line outcome.]</p>
+                        <h3>Spatial Data Automation</h3>
+                        <p>Python and scheduled tools that keep desktop, ArcGIS Online and backend data in sync.</p>
                         <a class="more" href="#projects">Read case study</a>
                     </div>
                 </article>
@@ -108,46 +123,70 @@
 <section id="experience" class="section alt">
     <div class="wrap">
         <h2 class="section-title">Experience</h2>
-        <p class="section-lede">[Optional one-line intro.]</p>
+        <p class="section-lede">From GIS internship to leading asset management systems, with a data-focused background throughout.</p>
 
         <div class="roles">
             <article class="role">
                 <div class="role-meta">Jan 2025 – Present</div>
                 <div>
-                    <h3>GIS Specialist</h3>
-                    <p class="role-company">Tapestry Research Group</p>
-                    <ul><li>[Impact bullet]</li><li>[Impact bullet]</li><li>[Impact bullet]</li></ul>
+                    <details class="role-details" open>
+                        <summary><h3>GIS Specialist</h3>
+                    <p class="role-company">Tapestry Research Group</p></summary>
+                    <ul>
+                        <li>Lead the design and deployment of GIS and asset management systems using PostgreSQL/PostGIS, ArcGIS Pro, ArcGIS Online, Dashboards, Survey123, Field Maps and QuickCapture.</li>
+                        <li>Developed field-to-dashboard workflows enabling real-time deficiency reporting, maintenance tracking and work-order management.</li>
+                        <li>Automate spatial data updates with Python/ArcPy and the ArcGIS API for Python, and carry out advanced LiDAR analysis including DTM/DSM/CHM generation, tree detection and volumetric modelling.</li>
+                    </ul>
+                    </details>
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">[Dates]</div>
+                <div class="role-meta">Mar 2022 – Sep 2024</div>
                 <div>
-                    <h3>GIS Analyst</h3>
-                    <p class="role-company">Ringway</p>
-                    <ul><li>[Impact bullet]</li><li>[Impact bullet]</li><li>[Impact bullet]</li></ul>
+                    <details class="role-details">
+                        <summary><h3>GIS Analyst</h3>
+                    <p class="role-company">Ringway</p></summary>
+                    <ul>
+                        <li>Delivered a 95% KPI for efficiency and work-order closure.</li>
+                        <li>Helped reclaim ~80% of outstanding items, reducing project backlogs.</li>
+                        <li>Maintained databases for accuracy and integrity, and used Excel (pivot tables, KPIs, automation) to boost team productivity.</li>
+                    </ul>
+                    </details>
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">[Dates]</div>
+                <div class="role-meta">Nov 2021 – Mar 2022</div>
                 <div>
-                    <h3>GIS Technician</h3>
-                    <p class="role-company">Cyient</p>
-                    <ul><li>[Impact bullet]</li><li>[Impact bullet]</li></ul>
+                    <details class="role-details">
+                        <summary><h3>GIS Technician</h3>
+                    <p class="role-company">Cyient</p></summary>
+                    <ul>
+                        <li>Processed and mapped data for subsidy distribution, maintaining databases of precise land parcel information.</li>
+                        <li>Classified and analysed habitat data to assess subsidy eligibility, consistently surpassing QA performance targets.</li>
+                    </ul>
+                    </details>
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">[Dates]</div>
+                <div class="role-meta">Jul 2021 – Oct 2021</div>
                 <div>
-                    <h3>GIS Intern</h3>
-                    <p class="role-company">Wildlife &amp; Ecological Investments</p>
-                    <ul><li>[Impact bullet]</li><li>[Impact bullet]</li></ul>
+                    <details class="role-details">
+                        <summary><h3>GIS Intern</h3>
+                    <p class="role-company">Wildlife &amp; Ecological Investments</p></summary>
+                    <ul>
+                        <li>Applied analytical tools to identify patterns and trends, enabling targeted habitat and species conservation actions.</li>
+                        <li>Mapped and analysed spatial data to pinpoint activity hotspots.</li>
+                    </ul>
+                    </details>
                 </div>
             </article>
             <article class="role">
-                <div class="role-meta">[Dates]</div>
+                <div class="role-meta">2018 – 2021</div>
                 <div>
-                    <h3>Earlier roles</h3>
-                    <p>[One short line covering MBI, IWG and London South Bank University.]</p>
+                    <details class="role-details">
+                        <summary><h3>Earlier roles</h3></summary>
+                    <p>Data-focused roles in admissions at London South Bank University, community operations at IWG, and market research at MBI, where accuracy and organisation came first.</p>
+                    </details>
                 </div>
             </article>
         </div>
@@ -158,51 +197,51 @@
 <section id="projects" class="section">
     <div class="wrap">
         <h2 class="section-title">Projects</h2>
-        <p class="section-lede">[Short intro to the case studies.]</p>
+        <p class="section-lede">A few examples of the systems and workflows I build, from data capture through to analysis and reporting.</p>
 
         <div class="grid">
             <article class="card">
                 <div class="thumb">
                     <img src="assets/images/portfolio/portfolio1.jpeg" alt="GIS project screenshot"
-                         onclick="openProjectModal(this.src, '[Project title]', '[Caption]')" style="cursor:pointer">
+                         onclick="openProjectModal(this.src, 'GIS &amp; Asset Management System', 'Field-to-dashboard asset management.')" style="cursor:pointer">
                 </div>
                 <div class="card-body">
-                    <h3>[Project title]</h3>
+                    <h3>GIS &amp; Asset Management System</h3>
                     <dl class="facts">
-                        <dt>Problem</dt><dd>[…]</dd>
-                        <dt>Approach</dt><dd>[…]</dd>
-                        <dt>Tools</dt><dd>[…]</dd>
-                        <dt>Outcome</dt><dd>[…]</dd>
+                        <dt>Problem</dt><dd>Asset records, field inspections and maintenance work were disconnected, making deficiencies slow to report and track.</dd>
+                        <dt>Approach</dt><dd>Designed a relational PostgreSQL/PostGIS asset database with custom schemas, automated IDs, editor tracking and versioning, connected to field and dashboard apps.</dd>
+                        <dt>Tools</dt><dd>PostgreSQL/PostGIS, ArcGIS Pro, ArcGIS Online, Survey123, Field Maps, QuickCapture, Dashboards</dd>
+                        <dt>Outcome</dt><dd>Real-time deficiency reporting, maintenance tracking and work-order management in one workflow.</dd>
                     </dl>
                 </div>
             </article>
             <article class="card">
-                <div class="thumb">[Diagram or image]</div>
+                <div class="thumb">LiDAR analysis</div>
                 <div class="card-body">
-                    <h3>[Project title]</h3>
+                    <h3>LiDAR Analysis Workflow</h3>
                     <dl class="facts">
-                        <dt>Problem</dt><dd>[…]</dd>
-                        <dt>Approach</dt><dd>[…]</dd>
-                        <dt>Tools</dt><dd>[…]</dd>
-                        <dt>Outcome</dt><dd>[…]</dd>
+                        <dt>Problem</dt><dd>Large LiDAR datasets needed turning into usable terrain, canopy and volume information.</dd>
+                        <dt>Approach</dt><dd>Built a repeatable process covering tiling, classification, DTM/DSM/CHM generation, tree detection, segmentation and volumetric modelling.</dd>
+                        <dt>Tools</dt><dd>ArcGIS Pro, LiDAR / remote sensing tools, Python</dd>
+                        <dt>Outcome</dt><dd>Consistent surface and canopy products, plus OLS airport surfaces, supporting operational planning.</dd>
                     </dl>
                 </div>
             </article>
             <article class="card">
-                <div class="thumb">[Diagram or image]</div>
+                <div class="thumb">Automation</div>
                 <div class="card-body">
-                    <h3>[Project title]</h3>
+                    <h3>Spatial Data Automation</h3>
                     <dl class="facts">
-                        <dt>Problem</dt><dd>[…]</dd>
-                        <dt>Approach</dt><dd>[…]</dd>
-                        <dt>Tools</dt><dd>[…]</dd>
-                        <dt>Outcome</dt><dd>[…]</dd>
+                        <dt>Problem</dt><dd>Keeping data aligned across desktop, ArcGIS Online and backend databases was manual and error-prone.</dd>
+                        <dt>Approach</dt><dd>Wrote Python/ArcPy and ArcGIS API for Python scripts, run as scheduled tools, to automate updates.</dd>
+                        <dt>Tools</dt><dd>Python, ArcPy, ArcGIS API for Python, ModelBuilder, Power Automate</dd>
+                        <dt>Outcome</dt><dd>Less manual handling and more reliable, up-to-date data across environments.</dd>
                     </dl>
                 </div>
             </article>
         </div>
 
-        <p class="note">[NDA line: many projects are confidential; detailed walkthroughs available on request.]</p>
+        <p class="note">Many of my projects are confidential or covered by NDAs for the communities and clients I work with. Detailed walkthroughs are available on request.</p>
     </div>
 </section>
 
@@ -214,27 +253,27 @@
             <div>
                 <h3>Skills</h3>
                 <div class="skill-group">
-                    <h4>[Group, e.g. GIS software]</h4>
-                    <ul class="chips"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul>
+                    <h4>GIS software</h4>
+                    <ul class="chips"><li>ArcGIS Pro</li><li>ArcGIS Online</li><li>Field Maps</li><li>Survey123</li><li>QuickCapture</li><li>Dashboards</li><li>QGIS</li></ul>
                 </div>
                 <div class="skill-group">
-                    <h4>[Group, e.g. Data &amp; programming]</h4>
-                    <ul class="chips"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul>
+                    <h4>Data &amp; programming</h4>
+                    <ul class="chips"><li>PostgreSQL / PostGIS</li><li>SQL (MySQL)</li><li>Python / ArcPy</li><li>ArcGIS API for Python</li><li>ModelBuilder</li><li>Power Automate</li><li>Microsoft Office</li></ul>
                 </div>
                 <div class="skill-group">
-                    <h4>[Group, e.g. Field &amp; remote sensing]</h4>
-                    <ul class="chips"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul>
+                    <h4>Field &amp; remote sensing</h4>
+                    <ul class="chips"><li>LiDAR processing</li><li>DTM / DSM / CHM</li><li>Tree detection</li><li>Volumetric modelling</li><li>Spatial analysis</li><li>Data analysis</li></ul>
                 </div>
             </div>
             <div>
-                <h3>Education &amp; certifications</h3>
+                <h3>Education</h3>
                 <div class="skill-group">
-                    <h4>[Degree]</h4>
-                    <p>Brighton University, [years]</p>
+                    <h4>BSc (Hons) Geography</h4>
+                    <p>University of Brighton, 2013–2016</p>
                 </div>
                 <div class="skill-group">
-                    <h4>[Certification]</h4>
-                    <p>[Issuer, year]</p>
+                    <h4>International Baccalaureate</h4>
+                    <p>Dartford Grammar School, 2006–2013</p>
                 </div>
             </div>
         </div>
@@ -250,8 +289,7 @@
         <p>Living alongside the rangers, waking before dawn to head out into the bush, I found a rhythm and a sense of purpose I hadn't really felt before. It taught me how much I value being useful in a tangible way — not just doing a job, but actually seeing the difference it makes on the ground.</p><br>
         <p>Outside of work, I'm pretty much always trying to be outdoors or moving. I love hiking and bouldering, and you'll usually find me at the gym a few times a week too — I like having something physical to balance out the hours spent staring at a screen mapping things. Travelling is a big one for me as well; I'll take any excuse to go and explore somewhere new, which honestly ties in quite nicely with my love of maps and landscapes in the first place. There's something satisfying about seeing a place with your own eyes after spending so much time looking at it from above.</p><br>
         <p>When I'm not out climbing or halfway up a hill somewhere, I'm happiest spending time with friends and family. That's the stuff that keeps me grounded, especially after a period like my early twenties where I felt a bit lost and unsure of what I was doing with my life. I've come to appreciate that having good people around you matters just as much as figuring out your career does — probably more, if I'm honest.</p><br>
-        <p>Looking back, I don't think my path needed to be linear to get me somewhere good. If anything, the detours — the false starts, the pandemic pause, the leap of faith to South Africa — are exactly what shaped who I am today, both in and out of work.</p><br>
-            <p>[Interests paragraph.]</p>
+        <p>Looking back, I don't think my path needed to be linear to get me somewhere good. If anything, the detours — the false starts, the pandemic pause, the leap of faith to South Africa — are exactly what shaped who I am today, both in and out of work.</p>
         </div>
 
         <div class="photos">
@@ -263,7 +301,7 @@
         <div class="cols" style="margin-top:56px">
             <div class="prose">
                 <h3 style="margin-bottom:12px">Volunteering</h3>
-                <p>[Short Parque Machía paragraph.]</p>
+                <p>In early 2019 I spent three months as a co-ordinator at Parque Machía in Villa Tunari, Bolivia, working with the park's animals and helping keep things running day to day. It was another reminder of how much I enjoy hands-on work that has a visible impact.</p>
             </div>
             <button class="photo" style="max-width:420px" onclick="openProjectModal('assets/images/hobbies/photo4.jpg', 'And smile... ft. Christina.')"><img src="assets/images/hobbies/photo4.jpg" alt="Holding a coati at Parque Machía"></button>
         </div>
