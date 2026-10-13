@@ -158,6 +158,7 @@ a { color: var(--sage-d); }
 
 .prose { max-width: none; }
 .prose p { margin: 0 0 1em; }
+.prose p:last-child { margin-bottom: 0; }
 /* Beyond the Map: text rows with a photo beside them */
 .story { margin-top: 36px; }
 .story-row { display: grid; grid-template-columns: 1fr minmax(220px, 300px); gap: 40px; align-items: center; margin-top: 40px; }
